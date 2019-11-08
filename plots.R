@@ -98,7 +98,6 @@ data_fig1d$scale_name <- factor(
 ########################################################
 
 joel.theme <- function(legend = TRUE, title_size = 10, hjust = 0.5) {
-
   # core theme for all plots
 
   theme <- theme_minimal() +
@@ -124,7 +123,6 @@ joel.theme <- function(legend = TRUE, title_size = 10, hjust = 0.5) {
 }
 
 select.colour.data <- function(data, select_scales) {
-
   # selects columns whose data will be coloured in
 
   data_selectcolours <- filter(data, Q_id_name %in% select_scales) # data to be coloured in
@@ -143,7 +141,6 @@ figure.one.layout <- function(data,
                               show_lines = TRUE,
                               show_title = TRUE,
                               y_axis_text = TRUE) {
-
   # core layout of figure one
 
   layout <- ggplot(
@@ -219,7 +216,6 @@ figure.one.layout <- function(data,
 }
 
 plot.fig1a <- function(panel1, panel2, panel3) {
-
   # arranges panels from fig 1c
 
   grob <- arrangeGrob(
@@ -245,7 +241,6 @@ plot.fig1a <- function(panel1, panel2, panel3) {
 }
 
 plot.fig1c.subpanel <- function(data_selectcolours, scale_names, selectcolours, title, y_axis_text = T, show_title = F) {
-
   # produces upper subpanel from fig 1c
 
   plot <- figure.one.layout(
@@ -265,7 +260,6 @@ plot.fig1c.subpanel <- function(data_selectcolours, scale_names, selectcolours, 
 }
 
 plot.fig1d.subpanel <- function(data_selectcolours, scale_names, selectcolours, y_axis_text = T) {
-
   # produces lower subpanel from fig 1c
 
   plot <- figure.one.layout(
@@ -282,7 +276,6 @@ plot.fig1d.subpanel <- function(data_selectcolours, scale_names, selectcolours, 
 }
 
 plot.fig1c.panel <- function(plot1 = fig1_c1, plot2 = fig1_d1, grob_widths = c(3.7, 10, 0.3), bottom_widths = c(0.2, 9.8)) {
-
   # creates grob for individual panel of fig 1c
 
   top <- arrangeGrob(
@@ -313,7 +306,6 @@ plot.fig1c.panel <- function(plot1 = fig1_c1, plot2 = fig1_d1, grob_widths = c(3
 }
 
 plot.fig1c <- function(panel1, panel2, panel3) {
-
   # arranges panels from fig 1c
 
   grob <- arrangeGrob(
@@ -347,7 +339,6 @@ plot.fig1c <- function(panel1, panel2, panel3) {
 }
 
 title.row <- function(title, fontsize = 20, widths = c(6, 8, 6), main = TRUE, hjust = NULL) {
-
   # creates grob object of title row
 
   if (main == TRUE) { # if main title
@@ -377,7 +368,6 @@ title.row <- function(title, fontsize = 20, widths = c(6, 8, 6), main = TRUE, hj
 }
 
 draw.separator <- function(line_width = 2, margins) {
-
   # draws separator in ggplot
 
   separator <- ggplot(
@@ -398,7 +388,6 @@ draw.separator <- function(line_width = 2, margins) {
 }
 
 grob.separator <- function(line_width = 2, margins = c(0, 0, 0.5, 0), grob_widths = c(3.7, 10, 0.3)) {
-
   # produces separator as a grob
 
   line_grob <- arrangeGrob(
@@ -414,7 +403,6 @@ grob.separator <- function(line_width = 2, margins = c(0, 0, 0.5, 0), grob_width
 }
 
 combined.legend <- function(plot) {
-
   # extracts combined legend
 
   temp <- ggplot_gtable(ggplot_build(plot))
@@ -426,7 +414,6 @@ combined.legend <- function(plot) {
 }
 
 plot.fig1 <- function(row1, row3, legend) {
-
   # arranges rows of grobs into full figure 1
 
   grob <- arrangeGrob(
@@ -514,7 +501,6 @@ fig1_d3 <- plot.fig1d.subpanel(
   selectcolours = colours[c(2, 1)],
   y_axis_text = FALSE
 )
-
 
 fig1_cd1 <- plot.fig1c.panel(fig1_c1, fig1_d1, grob_widths = c(3, 10, 0))
 fig1_cd2 <- plot.fig1c.panel(fig1_c2, fig1_d2, grob_widths = c(0.5, 10, 0), bottom_widths = c(0, 9.8))
