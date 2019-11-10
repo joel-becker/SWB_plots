@@ -1,5 +1,7 @@
 # SWB_plots
-Plotting functions for many-layered plots (for a subjective well-being paper).
+This repo contains plotting functions for many-layered plots.
+
+(The immediate purpose of these plots was use in a behavioural economics paper, but they are flexible enough to be useful more broadly.)
 
 ## Purpose of functions
 Professors Heffetz and Benjamin wanted the following 'non-trivial features':
