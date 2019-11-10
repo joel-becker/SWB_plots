@@ -9,6 +9,6 @@ Ori Heffetz and Daniel Benjamin wanted the following 'non-trivial features':
 The functions in `plots.R` allow for flexible production of a series of plots with the above characteristics.
 
 ## End result
-As currently written, the functions are combined to produce the following plot:
+As currently written, the functions combine to produce the following plot:
 
 ![Image description](https://github.com/joel-becker/SWB_plots/blob/master/Figure_1.png)
